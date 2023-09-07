@@ -1,40 +1,42 @@
+console.log("PROGRAM IN ARROW FUNCTION");
+
 // a) Print odd numbers in an array
 
-let arr=[1,3,5,34,55,68];
-let odd=function(arr){
+let num=[1,3,5,34,55,68];
+let Odd=(num)=>{
     let count=[];
-    for(let i=0;i<arr.length;i++){
-         if(arr[i]%2==1){
-             count.push(arr[i]);
+    for(let i=0;i<num.length;i++){
+         if(num[i]%2==1){
+             count.push(num[i]);
         }
     }
     return count;
 }
-console.log(odd(arr));
+console.log(Odd(num));
 
 // b) Convert all the strings to title caps in a string array
 
-let a= ["apple","orange","grape"];
-let titleCap=function(a){
+let STR= ["apple","orange","grape"];
+let TitleCap=(STR)=>{
     let NewArray=[];
-    for(let i=0;i<a.length;i++){
-        NewArray.push(a[i].charAt(0).toUpperCase()+a[i].slice(1));
+    for(let i=0;i<STR.length;i++){
+        NewArray.push(STR[i].charAt(0).toUpperCase()+STR[i].slice(1));
     }
     return NewArray;
 }
-console.log(titleCap(a));
+console.log(TitleCap(STR));
 
 // c) Sum of all numbers in an array
 
-let Arr=[1,3,5,34,55,68];
-let add=function(Arr){
+let Num=[1,3,5,34,55,68];
+let Add=(Num)=>{
     let sum=0;
-    for(let i=0;i<Arr.length;i++){
-        sum=sum+Arr[i];
+    for(let i=0;i<Num.length;i++){
+        sum=sum+Num[i];
     }
     return sum;
 } 
-console.log(add(Arr));
+console.log(Add(Num));
 
 // d) Return all the prime numbers in an array
 
@@ -42,15 +44,15 @@ console.log(add(Arr));
 
 // e) Return all the palindromes in an array
 
-let word=['mam','me','pen','level'];
-let palindrome=function(word){
+let Word=['mam','me','pen','level'];
+let Palindrome=(Word)=>{
     rev=[];
-    for(let i=0;i<word.length;i++){
+    for(let i=0;i<Word.length;i++){
         
-        if(word[i]==word[i].split('').reverse().join('')){
-            rev.push(word[i]);
+        if(Word[i]==Word[i].split('').reverse().join('')){
+            rev.push(Word[i]);
         }
     }
     return rev;
 }
-console.log(palindrome(word));
+console.log(Palindrome(Word));

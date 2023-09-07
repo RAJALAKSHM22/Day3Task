@@ -14,6 +14,7 @@ let odd=function(arr){
 console.log(odd(arr));
 
 // B) Convert the string to title caps.
+
 let a= ["apple","orange","grape"];
 let titleCap=function(a){
     let NewArray=[];
