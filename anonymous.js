@@ -1,7 +1,7 @@
 console.log("PROGRAM IN ANONYMOUS FUNCTION");
 
 // A) Print odd No's.
-let arr=[1,3,5,34,55,68];
+// let arr=[1,3,5,34,55,68];
 let odd=function(arr){
     let count=[];
     for(let i=0;i<arr.length;i++){
@@ -11,11 +11,11 @@ let odd=function(arr){
     }
     return count;
 }
-console.log(odd(arr));
+console.log(odd([1,3,5,34,55,68]));
 
 // B) Convert the string to title caps.
 
-let a= ["apple","orange","grape"];
+// let a= ["apple","orange","grape"];
 let titleCap=function(a){
     let NewArray=[];
     for(let i=0;i<a.length;i++){
@@ -23,12 +23,12 @@ let titleCap=function(a){
     }
     return NewArray;
 }
-console.log(titleCap(a));
+console.log(titleCap(["apple","orange","grape"]));
 
 
 // C) Sum of all numbers
 
-let Arr=[1,3,5,34,55,68];
+// let Arr=[1,3,5,34,55,68];
 let add=function(Arr){
     let sum=0;
     for(let i=0;i<Arr.length;i++){
@@ -36,7 +36,7 @@ let add=function(Arr){
     }
     return sum;
 } 
-console.log(add(Arr));
+console.log(add([1,3,5,34,55,68]));
 
 
 // D) Return the prime numbers 
@@ -47,7 +47,7 @@ console.log(add(Arr));
 
 // E) Return the palindromes in an array
 
-let word=['mam','me','pen','level'];
+// let word=['mam','me','pen','level'];
 let palindrome=function(word){
     rev=[];
     for(let i=0;i<word.length;i++){
@@ -58,13 +58,13 @@ let palindrome=function(word){
     }
     return rev;
 }
-console.log(palindrome(word));
+console.log(palindrome(['mam','me','pen','level']));
 
 
 // F) Return median of two sorted arrays 
 
-let arr1=[1,2,3,4],arr2=[5,6,7,8];
-const combArr= arr1.concat(arr2);
+const arr1=[1,2,3,4],arr2=[5,6,7,8];
+// const combArr= arr1.concat(arr2);
 let median=function(combArr){
     let i=((combArr.length-1));
     
@@ -77,7 +77,7 @@ let median=function(combArr){
         return (Re)
     }
 }
-console.log(median(combArr));
+console.log(median(arr1.concat(arr2)));
 
 // G) Remove duplicates from an array
 
