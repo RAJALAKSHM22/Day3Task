@@ -11,7 +11,7 @@ let Odd=(num)=>{
     }
     return count;
 }
-console.log(Odd(num));
+console.log(Odd([1,3,5,34,55,68]));
 
 // b) Convert all the strings to title caps in a string array
 
@@ -22,7 +22,7 @@ let TitleCap=(STR)=>{
     }
     return NewArray;
 }
-console.log(TitleCap(STR));
+console.log(TitleCap(["apple","orange","grape"]));
 
 // c) Sum of all numbers in an array
 
@@ -33,7 +33,7 @@ let Add=(Num)=>{
     }
     return sum;
 } 
-console.log(Add(Num));
+console.log(Add([1,3,5,34,55,68]));
 
 // d) Return all the prime numbers in an array
 
@@ -51,4 +51,4 @@ let Palindrome=(Word)=>{
     }
     return rev;
 }
-console.log(Palindrome(Word));
+console.log(Palindrome(['mam','me','pen','level']));
