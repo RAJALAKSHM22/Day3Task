@@ -1,7 +1,7 @@
 console.log("PROGRAM IN ANONYMOUS FUNCTION");
 
 // A) Print odd No's.
-// let arr=[1,3,5,34,55,68];
+
 let odd=function(arr){
     let count=[];
     for(let i=0;i<arr.length;i++){
@@ -15,7 +15,6 @@ console.log(odd([1,3,5,34,55,68]));
 
 // B) Convert the string to title caps.
 
-// let a= ["apple","orange","grape"];
 let titleCap=function(a){
     let NewArray=[];
     for(let i=0;i<a.length;i++){
@@ -25,10 +24,8 @@ let titleCap=function(a){
 }
 console.log(titleCap(["apple","orange","grape"]));
 
-
 // C) Sum of all numbers
 
-// let Arr=[1,3,5,34,55,68];
 let add=function(Arr){
     let sum=0;
     for(let i=0;i<Arr.length;i++){
@@ -38,16 +35,25 @@ let add=function(Arr){
 } 
 console.log(add([1,3,5,34,55,68]));
 
-
 // D) Return the prime numbers 
 
-// let Num=[1,3,5,7,34,55,68,77];
-
-
+let primeNo=[];
+let prime=function(Num){
+    for(let i=0;i<Num.length;i++){ 
+        if(Num[i]>1){
+            for(let j=1;j<Num[i];j++){
+                if((Num[i]%j)!=0){
+                    primeNo.push(Num[i]);
+                }
+            }            
+        }
+    }
+   return [...new Set(primeNo)];
+}
+console.log(prime([1,4,3,7,8,11,]))
 
 // E) Return the palindromes in an array
 
-// let word=['mam','me','pen','level'];
 let palindrome=function(word){
     rev=[];
     for(let i=0;i<word.length;i++){
@@ -64,7 +70,6 @@ console.log(palindrome(['mam','me','pen','level']));
 // F) Return median of two sorted arrays 
 
 const arr1=[1,2,3,4],arr2=[5,6,7,8];
-// const combArr= arr1.concat(arr2);
 let median=function(combArr){
     let i=((combArr.length-1));
     
@@ -81,13 +86,18 @@ console.log(median(arr1.concat(arr2)));
 
 // G) Remove duplicates from an array
 
-
+let removeDuplicate=function(Array){
+    return [...new Set(Array)];
+}
+console.log(removeDuplicate([1,1,22,5,23,3,3]))
 
 // H) Rotate an array by k times
 
-let atFirst=[1,2,3,4,5,6,7,8];
-
-
-
-
-
+let at=[1,2,3,4,5,6,7,8],k=4;
+let rotate=function(at,k){
+    for(let i=1;i<=k;i++){
+        let newAt=[];
+        console.log(newAt);
+        at.join('').slice(1)
+    }
+}

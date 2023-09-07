@@ -72,7 +72,9 @@ let Arr1=[1,2,3,4],ARr2=[5,6,7,8];
 
 // G) Remove duplicates from an array
 
-
+(function(Array){
+    console.log([...new Set(Array)]);
+}) (removeDuplicate([1,1,22,5,23,3,3]))
 
 // H) Rotate an array by k times
 
