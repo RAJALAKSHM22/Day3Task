@@ -40,15 +40,22 @@ console.log(add([1,3,5,34,55,68]));
 let primeNo=[];
 let prime=function(Num){
     for(let i=0;i<Num.length;i++){ 
+        let count = 1;
         if(Num[i]>1){
-            for(let j=1;j<Num[i];j++){
-                if((Num[i]%j)!=0){
-                    primeNo.push(Num[i]);
+            for(let j=2;j<=Num[i];j++){
+                if((Num[i]%j)==0){
+                    count++;
                 }
+                if(count>2){
+                    break;
+                }
+            }
+            if(count == 2){
+                primeNo.push(Num[i])
             }            
         }
     }
-   return [...new Set(primeNo)];
+   return primeNo;
 }
 console.log(prime([1,4,3,7,8,11,]))
 
@@ -93,11 +100,12 @@ console.log(removeDuplicate([1,1,22,5,23,3,3]))
 
 // H) Rotate an array by k times
 
-let at=[1,2,3,4,5,6,7,8],k=4;
 let rotate=function(at,k){
+    let number=at.join('');
     for(let i=1;i<=k;i++){
-        let newAt=[];
-        console.log(newAt);
-        at.join('').slice(1)
+        number=number.slice(1)+number.charAt(0);
     }
+    return number;
 }
+console.log(rotate([1,2,3,4,5,6,7,8],4));
+    

@@ -37,7 +37,27 @@ console.log(Add([1,3,5,34,55,68]));
 
 // d) Return all the prime numbers in an array
 
-
+let PrimeNo=[];
+let Prime=(Num)=>{
+    for(let i=0;i<Num.length;i++){ 
+        let Count = 1;
+        if(Num[i]>1){
+            for(let j=2;j<=Num[i];j++){
+                if((Num[i]%j)==0){
+                    Count++;
+                }
+                if(Count>2){
+                    break;
+                }
+            }
+            if(Count == 2){
+                PrimeNo.push(Num[i])
+            }            
+        }
+    }
+   return PrimeNo;
+}
+console.log(Prime([1,4,3,7,8,11,]))
 
 // e) Return all the palindromes in an array
 

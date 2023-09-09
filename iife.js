@@ -36,13 +36,31 @@ console.log("PROGRAM IN IIFE FUNCTION");
 
 // D) Return the prime numbers 
 
-
-
+let PrimeNum=[];
+(function(Num){
+    for(let i=0;i<Num.length;i++){ 
+        let count = 1;
+        if(Num[i]>1){
+            for(let j=2;j<=Num[i];j++){
+                if((Num[i]%j)==0){
+                    count++;
+                }
+                if(count>2){
+                    break;
+                }
+            }
+            if(count == 2){
+                PrimeNum.push(Num[i])
+            }            
+        }
+    }
+    console.log(PrimeNum);
+}) ([1,4,3,7,8,11,]);
 
 // E) Return the palindromes in an array
 
 (function(word){
-    rev=[];
+    let rev=[];
     for(let i=0;i<word.length;i++){
         
         if(word[i]==word[i].split('').reverse().join('')){
@@ -51,8 +69,6 @@ console.log("PROGRAM IN IIFE FUNCTION");
     }
     console.log( rev);
 }) (['mam','me','pen','level']);
-
-
 
 // F) Return median of two sorted arrays 
 
@@ -73,11 +89,17 @@ let Arr1=[1,2,3,4],ARr2=[5,6,7,8];
 // G) Remove duplicates from an array
 
 (function(Array){
-    console.log([...new Set(Array)]);
-}) (removeDuplicate([1,1,22,5,23,3,3]))
+    console.log(...new Set(Array));
+}) ([1,1,22,5,23,3,3]);
+
 
 // H) Rotate an array by k times
 
-
-
-
+let Rotate=function(at,k){
+    let Number=at.join('');
+    for(let i=1;i<=k;i++){
+        Number=Number.slice(1)+Number.charAt(0);
+    }
+    return Number;
+}
+console.log(rotate([1,2,3,4,5,6,7,8],4));
