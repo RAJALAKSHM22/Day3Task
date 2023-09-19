@@ -1,7 +1,6 @@
 console.log("PROGRAM IN ANONYMOUS FUNCTION");
 
 // A) Print odd No's.
-
 let odd=function(arr){
     let count=[];
     for(let i=0;i<arr.length;i++){
@@ -13,8 +12,10 @@ let odd=function(arr){
 }
 console.log(odd([1,3,5,34,55,68]));
 
-// B) Convert the string to title caps.
+// OUTPUT:
+// anonymous.js:14 (4) [1, 3, 5, 55]
 
+// B) Convert the string to title caps.
 let titleCap=function(a){
     let NewArray=[];
     for(let i=0;i<a.length;i++){
@@ -24,8 +25,10 @@ let titleCap=function(a){
 }
 console.log(titleCap(["apple","orange","grape"]));
 
-// C) Sum of all numbers
+// OUTPUT:
+// anonymous.js:26 (3) ['Apple', 'Orange', 'Grape']
 
+// C) Sum of all numbers
 let add=function(Arr){
     let sum=0;
     for(let i=0;i<Arr.length;i++){
@@ -35,8 +38,10 @@ let add=function(Arr){
 } 
 console.log(add([1,3,5,34,55,68]));
 
-// D) Return the prime numbers 
+// OUTPUT:
+// anonymous.js:39 166
 
+// D) Return the prime numbers 
 let primeNo=[];
 let prime=function(Num){
     for(let i=0;i<Num.length;i++){ 
@@ -59,8 +64,10 @@ let prime=function(Num){
 }
 console.log(prime([1,4,3,7,8,11,]))
 
-// E) Return the palindromes in an array
+// OUTPUT:
+// anonymous.js:65 (3) [3, 7, 11]
 
+// E) Return the palindromes in an array
 let palindrome=function(word){
     rev=[];
     for(let i=0;i<word.length;i++){
@@ -73,9 +80,10 @@ let palindrome=function(word){
 }
 console.log(palindrome(['mam','me','pen','level']));
 
+// OUTPUT:
+// anonymous.js:81 (2) ['mam', 'level']
 
 // F) Return median of two sorted arrays 
-
 const arr1=[1,2,3,4],arr2=[5,6,7,8];
 let median=function(combArr){
     let i=((combArr.length-1));
@@ -91,21 +99,27 @@ let median=function(combArr){
 }
 console.log(median(arr1.concat(arr2)));
 
-// G) Remove duplicates from an array
+// OUTPUT:
+// anonymous.js:100  4.5
 
+// G) Remove duplicates from an array
 let removeDuplicate=function(Array){
     return [...new Set(Array)];
 }
 console.log(removeDuplicate([1,1,22,5,23,3,3]))
 
-// H) Rotate an array by k times
+// OUTPUT:
+// anonymous.js:109 (5) [1, 22, 5, 23, 3]
 
+// H) Rotate an array by k times
 let rotate=function(at,k){
     let number=at.join('');
     for(let i=1;i<=k;i++){
         number=number.slice(1)+number.charAt(0);
     }
-    return number;
+    return number.split('');
 }
 console.log(rotate([1,2,3,4,5,6,7,8],4));
-    
+ 
+// OUTPUT:
+// anonymous.js:122 (8) ['5', '6', '7', '8', '1', '2', '3', '4']
